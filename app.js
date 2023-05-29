@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //Verbinden met de specifieke database, is die er nog niet dan wordt deze aangemaakt
+mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://admin-ineke:xnZZcK411bTdHR4G@cluster0.8yexyqp.mongodb.net/todolistDB");
 
 //1. Opzet voor een nieuwe database: hoe zien to-do items eruit
